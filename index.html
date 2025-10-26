@@ -85,16 +85,15 @@
     <h2>Зворотний зв’язок</h2>
   <p>Якщо у вас є питання або пропозиції — напишіть мені! 👇</p>
 
-  <form class="contact-form" action="mailto:denys.orlovskyi000@gmail.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="Ваше ім’я" required>
-    <input type="email" name="email" placeholder="Ваш Email" required>
-    <textarea name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
-    <button type="submit">Надіслати</button>
-  </form>
-</section>
-  </div>
-
-
+  <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+  <input type="hidden" name="access_key" value="4f1749a4-cc17-42d0-984c-6f540aa0f332">
+  
+  <input type="text" name="name" placeholder="Ваше ім’я" required>
+  <input type="email" name="email" placeholder="Ваш Email" required>
+  <textarea name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+  
+  <button type="submit">Надіслати</button>
+</form>
 
 <!-- Нижній банер -->
 <footer class="footer">
@@ -130,4 +129,5 @@
 </script>
 
 </body>
+
 </html>
