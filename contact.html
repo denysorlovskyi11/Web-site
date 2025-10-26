@@ -57,12 +57,13 @@
       </div>
 
       <h3>Зв’язок з учителем</h3>
-      <form class="contact-form">
-        <input type="text" placeholder="Ваше ім’я" required>
-        <input type="email" placeholder="Ваш Email" required>
-        <textarea placeholder="Ваше повідомлення" required></textarea>
-        <button type="submit">Надіслати</button>
-      </form>
+     <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+  <input type="hidden" name="access_key" value="4f1749a4-cc17-42d0-984c-6f540aa0f332">
+  <input type="text" name="name" placeholder="Ваше ім’я" required>
+  <input type="email" name="email" placeholder="Ваш Email" required>
+  <textarea name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+  <button type="submit">Надіслати</button>
+</form>
     </section>
   </div>
   
@@ -100,4 +101,5 @@
 </script>
 
 </body>
+
 </html>
