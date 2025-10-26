@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контактна інформація - Сайт вчителя інформатики</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Бокова панель -->
+ <div class="sidebar">
+ <img src="images/logo.png"width="60" height="50" alt="Логотип вчителя інформатики" class="sidebar-logo">
+ <p class="sidebar-title-text">
+      Сайт<br>вчителя<br>інформатики
+      </p>
+  
+  <ul>
+      <li><a href="index.html">Головна сторінка</a></li>
+      <li><a href="about.html">Про мене</a></li>
+      <li class="has-submenu">
+        <span>Навчальні матеріали</span>
+        <ul class="submenu">
+          <li><a href="class5.html">5 клас</a></li>
+          <li><a href="class6.html">6 клас</a></li>
+          <li><a href="class7.html">7 клас</a></li>
+          <li><a href="class8.html">8 клас</a></li>
+          <li><a href="class9.html">9 клас</a></li>
+        </ul>
+      </li>
+      <li><a href="students.html">Для учнів</a></li>
+      <li><a href="parents.html">Для батьків</a></li>
+      <li><a href="contact.html" class="active">Контактна інформація</a></li>  
+    </ul>
+  </div>
+
+  <!-- Основна частина -->
+  <div class="main">
+    <header>
+      <h1>Контактна інформація</h1>
+    </header>
+
+    <section class="content main-content">
+      <h2>Зв’язок зі мною</h2>
+      <p>Якщо у вас є запитання, пропозиції чи ідеї щодо навчання інформатики — пишіть, і я з радістю відповім.</p>
+
+      <div class="contact-info">
+        <p><strong>📧 Електронна пошта:</strong> <a href="mailto:denys.teacher@gmail.com">denys.orlovskyi000@gmail.com</a></p>
+        <p><strong>📞 Телефон:</strong> +38 (098) 317 30 30</p>
+        <p><strong>🏫 Навчальний заклад:</strong> Вінницький державний педагогічний університет імені Михайла Коцюбинського</p>
+      </div>
+
+      <h3>Соціальні мережі</h3>
+      <div class="social-links">
+        <a href="https://t.me/denys_teacher" target="_blank">💬 Telegram</a> |
+        <a href="https://facebook.com/denys.teacher" target="_blank">📘 Facebook</a> |
+        <a href="https://instagram.com/denys_teacher" target="_blank">📸 Instagram</a>
+      </div>
+
+      <h3>Зв’язок з учителем</h3>
+      <form class="contact-form">
+        <input type="text" placeholder="Ваше ім’я" required>
+        <input type="email" placeholder="Ваш Email" required>
+        <textarea placeholder="Ваше повідомлення" required></textarea>
+        <button type="submit">Надіслати</button>
+      </form>
+    </section>
+  </div>
+  
+<!-- Нижній банер -->
+<footer class="footer">
+  <div class="clock" id="clock">00:00:00</div>
+  <div class="date" id="date">01.01.2025</div>
+  <div class="contacts">
+    <p>Email: denys.orlovskyi000@gmail.com</p>
+    <p>Телефон: +380 98 317 30 30</p>
+  </div>
+</footer>
+
+</div>
+
+<script src="js/script.js"></script>
+
+<script>
+  // Годинник і календар
+  function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const year = now.getFullYear();
+
+    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('date').textContent = `${day}.${month}.${year}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
+
+</body>
+</html>

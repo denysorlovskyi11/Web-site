@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт вчителя інформатики</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Бокова панель -->
+<div class="sidebar">
+  <img src="images/logo.png"width="60" height="50" alt="Логотип вчителя інформатики" class="sidebar-logo">
+  <p class="sidebar-title-text">
+      Сайт<br>вчителя<br>інформатики
+      </p>
+  
+  <ul>
+
+   <li><a href="index.html" class="active">Головна сторінка</a></li>
+<li><a href="about.html">Про мене</a></li>
+    <!-- Навчальні матеріали без посилання -->
+    <li class="has-submenu">
+      <span>Навчальні матеріали</span> <!-- не клікабельний -->
+      <ul class="submenu">
+        <li><a href="class5.html">5 клас</a></li>
+        <li><a href="class6.html">6 клас</a></li>
+        <li><a href="class7.html">7 клас</a></li>
+        <li><a href="class8.html">8 клас</a></li>
+        <li><a href="class9.html">9 клас</a></li>
+      </ul>
+    </li>
+
+    <li><a href="students.html">Для учнів</a></li>
+    <li><a href="parents.html">Для батьків</a></li>
+    <li><a href="contact.html">Контактна інформація </a></li>  
+  </ul>
+</div>
+
+  <!-- Основна частина -->
+  <div class="main">
+    <header>
+      <h1>Сайт вчителя інформатики<br>Орловського Дениса Михайловича</h1>
+    </header>
+
+<section class="content main-content">
+
+    <h2>Вітаю на освітньому сайті</h2>
+
+    <div class="teacher-welcome">
+        
+        <img src="images/photo.png" alt="Фото вчителя інформатики" class="teacher-photo">
+        
+        <div class="welcome-text">
+            <p>Цей ресурс створено для учнів, учителів та всіх, хто цікавиться інформатикою. Тут ви знайдете навчальні матеріали, поради з цифрової грамотності та інформацію для розвитку сучасних цифрових навичок.</p>
+
+            <p>Разом ми вчимось мислити логічно, розв'язувати задачі й відкривати світ технологій! 🌎</p>
+        </div>
+    
+    <img src="images/denys.jpg" class="teacher-photo right-photo">
+    
+</div>
+
+    <h2 class="section-title">Професійні Оновлення</h2>
+
+<div class="news-container">
+    
+    <div class="news-item">
+        <img src="images/nush_online.png"width="360" height="200" alt="Матеріали Pi-stacja" class="news-thumb">
+        
+        <a href="https://lms.e-school.net.ua/courses/course-v1:Katalyst+Informatyka-NUS-5-6th+2024/about?fbclid=..." target="_blank">
+            Нові матеріали з інформатики для НУШ (5-6 класи) від Pi-stacja та ВШО
+        </a>
+    </div>
+
+    <div class="news-item">
+        <img src="images/nush_5-9.png"width="360" height="200" alt="Іконка оцінювання НУШ" class="news-thumb">
+        
+        <a href="https://mon.gov.ua/news/otsiniuvannia-v-59-klasakh-nush-vidpovidaiemo-na-zapytannia" target="_blank">
+            Оцінювання в 5-9 класах НУШ (Відповіді МОН)
+        </a>
+    </div>
+</div>
+
+<section class="contact-info">
+    <h2>Зворотний зв’язок</h2>
+  <p>Якщо у вас є питання або пропозиції — напишіть мені! 👇</p>
+
+  <form class="contact-form" action="mailto:denys.orlovskyi000@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Ваше ім’я" required>
+    <input type="email" name="email" placeholder="Ваш Email" required>
+    <textarea name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+    <button type="submit">Надіслати</button>
+  </form>
+</section>
+  </div>
+
+
+
+<!-- Нижній банер -->
+<footer class="footer">
+  <div class="clock" id="clock">00:00:00</div>
+  <div class="date" id="date">01.01.2025</div>
+  <div class="contacts">
+    <p>Email: denys.orlovskyi000@gmail.com</p>
+    <p>Телефон: +380 98 317 30 30</p>
+  </div>
+</footer>
+
+</div>
+
+<script src="js/script.js"></script>
+
+<script>
+  // Годинник і календар
+  function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const year = now.getFullYear();
+
+    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('date').textContent = `${day}.${month}.${year}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
+
+</body>
+</html>

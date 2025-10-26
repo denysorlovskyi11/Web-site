@@ -1,0 +1,560 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  background-color: #ffffff;
+  padding-bottom: 40px; /* додає простір над футером */
+}
+
+/* Бокова панель */
+.sidebar {
+  background-color: #001f3d; /* темніший відтінок */
+  color: white;
+  width: 235px; /* вужча панель */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed; /* фіксуємо панель */
+  top: 0;
+  left: 0;
+  height: 100vh; /* на весь екран */
+  overflow-y: auto; /* прокрутка, якщо багато пунктів */
+  box-sizing: border-box;
+}
+
+/* Заголовок сайту */
+.sidebar h2 {
+  line-height: 1.3;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+
+/* Список меню */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin-top: 5px; /* відступ від верху */
+}
+
+/* Пункти меню */
+.sidebar ul li {
+  margin: 15px 0;
+  position: relative; /* для підменю */
+}
+
+.sidebar ul li a,
+.sidebar ul li span {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar ul li a:hover {
+  transform: scale(1.05);
+}
+
+/* Фігура під текстом */
+.sidebar ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00bfff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.sidebar ul li a:hover::before {
+  opacity: 0.3;
+}
+
+/* Підменю */
+.submenu {
+  list-style: none;
+  padding-left: 10px; /* менший відступ, ближче до заголовка */
+  margin-top: 5px; /* трохи відступу зверху від "Навчальні матеріали" */
+  display: none; /* спочатку ховаємо */
+}
+
+
+.has-submenu:hover .submenu {
+  display: block; /* показуємо при наведенні */
+}
+
+.has-submenu > span {
+  cursor: default; /* не клікабельний заголовок */
+}
+
+.submenu li a {
+  font-size: 14px;
+  color: #ffffffaa;
+  padding: 5px 10px;
+  display: block;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.submenu li a:hover {
+  color: #00bfff;
+  transform: scale(1.05);
+}
+
+
+/* Основна частина */
+.main {
+  margin-left: 235px; /* відступ під бокову панель */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Верхній банер */
+header {
+  position: fixed;
+  top: 0;
+  left: 235px;
+  right: 0;
+  height: 5cm;
+  background-image: url('images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  justify-content: flex-end; /* Вирівнює вміст вправо */
+  align-items: center;
+  font-size: 0.9em;
+  transition: height 0.3s ease, opacity 0.3s ease;
+  z-index: 10;
+  padding-right: 40px; /* Відступ справа */
+}
+
+/* Стан «згорнутий/прихований» */
+header.shrink {
+  height: 0;
+  opacity: 0;
+}
+/* Щоб контент не заходив під банер */
+.content {
+  flex: 1;
+  padding: 5cm 40px 40px; /* відступ зверху дорівнює висоті банера */
+}
+
+/* Текст на банері */
+header h1 {
+  margin: 0;
+  color: white;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Темна накладка */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0; /* Накладка знаходиться на шарі 0 */
+}
+
+.sidebar ul li a.active {
+  background-color: #003366; /* колір підсвітки */
+  color: white; /* колір тексту */
+  opacity: 1;    /* щоб не було напівпрозорості */
+}
+
+.sidebar ul li a.active::before {
+  opacity: 0.3; /* якщо ти використовуєш псевдоелемент для ефекту */
+}
+.sidebar a.active {
+  background-color: #003366; /* трохи світліший відтінок від панелі */
+  color: #00bfff; /* колір тексту активного пункту */
+}
+
+
+
+
+
+.summary-list li {
+    /* КЛЮЧОВЕ: Рівномірно розподіляє слова, щоб текст заповнював усю ширину рядка */
+    text-align: justify; 
+}
+/* Це застосовується до всіх абзаців всередині вашого блоку */
+.topics-summary-container p {
+    /* КЛЮЧОВЕ: Додає відступ на початку першого рядка */
+    text-indent: 1.5em; /* Використовуйте 1.5em або 20px для стандартного абзацного відступу */
+    
+    /* Очистіть будь-яке примусове вирівнювання (якщо воно там було) */
+    text-align: left; 
+    
+    /* Додайте міжрядковий інтервал для кращої читабельності */
+    line-height: 1.6; 
+}
+
+
+
+
+
+
+
+
+/* --- Додавання вирівнювання по центру Головна сторінка --- */
+/* Контейнер, що містить вітальний текст та новини */
+.main-content {
+    /* Додаємо text-align: center, щоб вирівняти заголовок h2 */
+    text-align: center;
+}
+
+.main-content h2 { /*Текст Вітаю на освітньому сайті*/
+    font-size: 1,3em;
+    margin-bottom: 0.5em; 
+}
+
+/* Вирівнювання вітального тексту по центру, обмежуючи його ширину для кращого вигляду */
+.welcome-text {
+    max-width: 800px; /* Обмеження максимальної ширини блоку */
+    margin: 0 auto 30px auto; /* Центрування самого блоку по горизонталі */
+    text-align: center; /* Вирівнювання тексту всередині блоку "по ширині", якщо потрібно */
+}
+
+/* Заголовки розділів (Новини) */
+.section-title {
+  text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Блок новин - використовуємо flexbox для центрування самих елементів новин */
+.news-container {
+    display: flex;
+    justify-content: center;  /* новини вирівнюються вліво */
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-center: 60px;
+}
+
+/* Елемент новини - задаємо фіксовану ширину для кращого вигляду */
+.news-item {
+    max-width: 350px; /* Обмеження ширини елемента новини */
+    text-align: left; /* Текст новини краще виглядає вирівняним по лівому краю */
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+
+/* --- СТИЛІ ДЛЯ ЗОБРАЖЕННЯ ВЧИТЕЛЯ І ВІТАННЯ --- */
+
+/* --- КОНТЕЙНЕР ДЛЯ ВІТАННЯ ТА ФОТО --- */
+.teacher-welcome {
+    display: flex;
+    
+    /* КЛЮЧОВЕ: Забезпечує, що весь блок буде по центру */
+    justify-content: center; 
+    align-items: center; 
+    
+    /* Збільште max-width, щоб було достатньо місця для двох фото + тексту + відступів (gap) */
+    /* Рекомендовано: 1200px або більше, залежно від розміру ваших фото */
+    max-width: 1200px; /* <--- ЗМІНЮЄМО ЦЕ ЗНАЧЕННЯ */
+    margin: 30px auto; /* Центрує контейнер на сторінці */
+    gap: 30px; 
+}
+
+/* --- СТИЛІ ДЛЯ ФОТОГРАФІЙ (teacher-photo) --- */
+.teacher-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* КЛЮЧОВЕ: Запобігає стисканню фото, зберігаючи фіксований розмір */
+    flex-shrink: 0; 
+    /* ...інші стилі (border-radius, box-shadow) */
+}
+
+/* --- СТИЛІ ДЛЯ ТЕКСТУ (welcome-text) --- */
+.welcome-text {
+    /* КЛЮЧОВЕ: Дозволяє тексту займати доступний простір */
+    flex-grow: 1; 
+    
+    /* Дозволяємо стискатися, коли місця стає менше */
+    flex-shrink: 1; 
+    
+    /* Обмежуємо ширину тексту для кращої читабельності */
+    max-width: 600px; 
+    margin: 0; 
+    text-align: center; 
+}
+
+
+
+
+
+
+
+/* Стооінка про мене. Стилі для повного центрування блоку "Про мене та мою мету" */
+
+.teacher-profile-layout {
+    display: flex; /* Включаємо Flexbox для розташування елементів */
+    gap: 20px; /* Додаємо простір між елементами */
+    align-items: flex-start; /* Вирівнюємо елементи зверху (за потреби) */
+}
+.profile-info h2 {
+    text-align: center; /* Центрує заголовок */
+}
+
+.profile-info {
+    flex: 1; /* Дозволяємо блоку з інформацією зайняти доступний простір */
+    /* width: 70%;  Можна задати конкретну ширину, наприклад 70% */
+}
+
+.profile-photo-block {
+    flex-shrink: 0; /* Запобігаємо зменшенню ширини блоку з фото */
+    /* width: 30%; Можна задати конкретну ширину, наприклад 30% */
+    text-align: right; /* Вирівнюємо фотографію праворуч, якщо вона менша за контейнер */
+}
+
+.teacher-photo1 {
+    max-width: 100%; /* Забезпечуємо, що фото поміщається у свій блок */
+    height: auto;
+    display: block; /* Видаляємо зайвий простір під зображенням */
+     margin-top: 50px; /* Додайте цей рядок для відступу зверху */
+}
+.teacher-photo1 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* КЛЮЧОВЕ: Запобігає стисканню фото, зберігаючи фіксований розмір */
+    flex-shrink: 0; 
+    /* ...інші стилі (border-radius, box-shadow) */
+}
+
+.profile-info li {
+    /* КЛЮЧОВЕ: Рівномірно розподіляє слова, щоб текст заповнював усю ширину рядка */
+    text-align: justify; 
+}
+/* Це застосовується до всіх абзаців всередині вашого блоку */
+.profile-info p {
+    /* КЛЮЧОВЕ: Додає відступ на початку першого рядка */
+    text-indent: 1.5em; /* Використовуйте 1.5em або 20px для стандартного абзацного відступу */
+    
+    /* Очистіть будь-яке примусове вирівнювання (якщо воно там було) */
+    text-align: left; 
+    
+    /* Додайте міжрядковий інтервал для кращої читабельності */
+    line-height: 1.6; 
+}
+
+
+
+
+
+/* Сторінка контактна інформація  */
+
+.contact-info {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 80%;
+  max-width: 500px;
+  margin: 8px 0;
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #0055aa;
+}
+
+
+
+
+
+
+/* Нижній банер (footer) */
+/* Нижній банер (footer) */
+
+.footer {
+  background-color: #003366;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  position: fixed;
+  bottom: 0;
+  left: 235px;
+  right: 0;
+  height: 30px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+  font-size: 0.8em;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.footer.hidden {
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none;
+}
+.footer .contacts p {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 0.8em;
+}
+
+
+
+
+
+/* ---- Макет сторінки 5 клас ---- */
+.book-layout {
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+  gap: 15px; /* Змінено з 25px на 15px, щоб змістити ближче */
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+/* Стиль кнопки */
+.book-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #0b3d91;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-button:hover {
+  background-color: #1356c5;
+  transform: translateY(-2px);
+}
+
+/* Інформаційний блок */
+.book-info {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Обкладинка підручника */
+.book-cover {
+    /* Додаємо новий стиль для контейнера обкладинки */
+    margin-left: -130px; /* Зміщує обкладинку ліворуч на 10px */
+}
+.book-cover img {
+  width: 200px;
+  height: auto;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.book-cover img:hover {
+  transform: scale(1.05);
+}
+
+/* ---- Адаптивність ---- */
+@media (max-width: 768px) {
+  .book-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15 px;
+  }
+
+  .book-cover img {
+    width: 180px;
+  }
+}
+
+
+
+
+
+.main {
+    margin-left: 235px; /* Залишаємо відступ для бічної панелі */
+    padding: 20px;
+    background-color: #f4f4f4; /* Це був ваш "білий холст", тепер буде фонове зображення */
+    min-height: 100vh; /* Забезпечуємо, що main займає всю висоту вікна */
+    
+    /* --- ДОДАЄМО ФОНОВЕ ЗОБРАЖЕННЯ --- */
+    background-image: url('images/main_background.jpg'); /* Шлях до вашого зображення */
+    background-size: cover; /* Розтягує зображення, щоб воно повністю покрило весь блок main */
+    background-position: center; /* Центрує зображення */
+    background-repeat: no-repeat; /* Запобігає повторенню зображення */
+    background-attachment: fixed; /* (Опціонально) Фіксує зображення під час прокручування */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
