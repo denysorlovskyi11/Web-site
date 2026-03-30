@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практика ЗЗСО — Вчитель інформатики</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <img src="images/logo.png" width="60" height="50" class="sidebar-logo">
+  <p class="sidebar-title-text">
+    Сайт<br>вчителя<br>інформатики
+  </p>
+
+  <ul>
+    <li><a href="index.html">Головна сторінка</a></li>
+    <li><a href="about.html">Про мене</a></li>
+
+    <li class="has-submenu">
+      <span>Навчальні матеріали</span>
+      <ul class="submenu">
+        <li><a href="class5.html">5 клас</a></li>
+        <li><a href="class6.html">6 клас</a></li>
+        <li><a href="class7.html">7 клас</a></li>
+        <li><a href="class8.html">8 клас</a></li>
+        <li><a href="class9.html">9 клас</a></li>
+      </ul>
+    </li>
+
+    <li><a href="students.html">Для учнів</a></li>
+    <li><a href="practice.html" class="active">Практика ЗЗСО</a></li>
+    <li><a href="parents.html">Для батьків</a></li>
+    <li><a href="contact.html">Контактна інформація</a></li>
+  </ul>
+</div>
+
+<div class="main">
+  <header>
+    <h1>Практика у ЗЗСО</h1>
+  </header>
+
+<section class="content">
+
+  <h2 class="section-title">Ласкаво просимо на сторінку практики</h2>
+
+  <p style="text-indent: 1.5em;">
+    Тут представлено матеріали та результати проходження педагогічної практики 
+    у закладі загальної середньої освіти. Практика є важливою складовою підготовки 
+    майбутнього вчителя інформатики.
+  </p>
+
+  <h2 class="section-title">📌 Основні напрямки діяльності</h2>
+
+  <ul class="summary-list">
+    <li>проведення уроків інформатики у 5–9 класах;</li>
+    <li>розробка планів-конспектів уроків;</li>
+    <li>створення презентацій та дидактичних матеріалів;</li>
+    <li>організація практичних робіт для учнів;</li>
+    <li>використання сучасних цифрових технологій;</li>
+    <li>оцінювання навчальних досягнень учнів.</li>
+  </ul>
+
+  <h2 class="section-title">📚 Навчальні матеріали</h2>
+
+  <ul class="summary-list">
+    <li><a href="#">Плани-конспекти уроків</a></li>
+    <li><a href="#">Презентації до уроків</a></li>
+    <li><a href="#">Практичні роботи</a></li>
+    <li><a href="#">Тестові завдання</a></li>
+  </ul>
+
+  <h2 class="section-title">🧪 Приклади практичних завдань</h2>
+
+  <ul class="summary-list">
+    <li>Створення презентації у PowerPoint / Canva</li>
+    <li>Робота з текстовими документами</li>
+    <li>Створення алгоритмів у Scratch</li>
+    <li>Основи веб-розробки (HTML)</li>
+  </ul>
+
+  <h2 class="section-title">📊 Результати практики</h2>
+
+  <ul class="summary-list">
+    <li>проведено навчальні заняття;</li>
+    <li>створено власні методичні матеріали;</li>
+    <li>отримано досвід роботи з учнями;</li>
+    <li>використано інтерактивні технології навчання.</li>
+  </ul>
+
+  <h2 class="section-title">📸 Фото з практики</h2>
+
+  <div class="news-container">
+    <div class="news-item">
+      <img src="images/practice1.jpg" width="360" height="200" class="news-thumb">
+      <p><b>Проведення уроку</b></p>
+    </div>
+
+    <div class="news-item">
+      <img src="images/practice2.jpg" width="360" height="200" class="news-thumb">
+      <p><b>Робота з учнями</b></p>
+    </div>
+  </div>
+
+  <section class="contact-info">
+    <h2 class="section-title">💬 Зворотний зв'язок</h2>
+
+    <form class="contact-form" action="mailto:denys.orlovskyi000@gmail.com" method="post">
+      <input type="text" name="name" placeholder="Ваше ім’я" required>
+      <input type="email" name="email" placeholder="Ваш Email" required>
+      <textarea name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+      <button type="submit">Надіслати</button>
+    </form>
+  </section>
+
+</section>
+
+<footer class="footer">
+  <div class="clock" id="clock">00:00:00</div>
+  <div class="date" id="date">01.01.2025</div>
+  <div class="contacts">
+    <p>Email: denys.orlovskyi000@gmail.com</p>
+    <p>Телефон: +380 98 317 30 30</p>
+  </div>
+</footer>
+
+</div>
+
+<script src="js/script.js"></script>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const year = now.getFullYear();
+
+  document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+  document.getElementById('date').textContent = `${day}.${month}.${year}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
