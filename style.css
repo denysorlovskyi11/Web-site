@@ -542,7 +542,6 @@ header::before {
 .justify-text {
   text-align: justify;
   text-indent: 1.25cm;
-  margin-bottom: 12px;
    margin: 0; 
   line-height: 1.6;
 }
