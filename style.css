@@ -539,8 +539,12 @@ header::before {
     background-repeat: no-repeat; /* Запобігає повторенню зображення */
     background-attachment: fixed; /* (Опціонально) Фіксує зображення під час прокручування */
 }
-
-
+.justify-text {
+  text-align: justify;
+  text-indent: 1.5em;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
 
 
 
