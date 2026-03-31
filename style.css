@@ -545,6 +545,10 @@ header::before {
    margin: 0; 
   line-height: 1.6;
 }
+h2.section-title {
+  text-align: center;
+  font-weight: bold;
+}
 
 
 
