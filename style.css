@@ -591,10 +591,22 @@ h2.section-title {
   padding: 6px 0;
 }
 
+
 .submenu {
+  display: none;
+  list-style: none;
+  padding-left: 15px;
+}
+
+.has-submenu.active > .submenu {
   display: block;
 }
 
+.has-submenu > span {
+  cursor: pointer;
+  display: block;
+  padding: 8px 0;
+}
 
 
 
