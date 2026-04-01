@@ -604,27 +604,45 @@ h2.section-title {
 
 }
 
-/* Відступи для рівнів */
-.sidebar .practice-submenu {
+
+
+
+
+
+.practice-submenu {
+  display: none;
+  list-style: none;
   padding-left: 15px;
+  margin: 0;
 }
 
-.sidebar .third-level {
+.practice-item:hover > .practice-submenu {
+  display: block;
+}
+
+.third-submenu {
+  display: none;
+  list-style: none;
   padding-left: 20px;
+  margin: 0;
 }
 
-/* Щоб кнопка виглядала як звичайний пункт меню */
-.sidebar .submenu-toggle {
-  font-family: inherit;
+.practice-group.active > .third-submenu {
+  display: block;
 }
 
-/* Можеш трохи зменшити текст у вкладених меню */
-.sidebar .practice-submenu > li > button,
-.sidebar .third-level a {
-  font-size: 17px;
+.practice-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
 }
 
-
-
-
-
+.practice-btn:hover {
+  background-color: #0a4a86;
+}
