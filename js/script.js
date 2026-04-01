@@ -40,12 +40,21 @@ window.addEventListener('scroll', function() {
   }
 });
 
-document.querySelectorAll('.has-submenu > span').forEach(item => {
-  item.addEventListener('click', function() {
-    this.parentElement.classList.toggle('active');
+document.querySelectorAll('.submenu-toggle').forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.stopPropagation();
+
+    const currentItem = this.parentElement;
+    const allItems = document.querySelectorAll('.click-submenu');
+
+    allItems.forEach(item => {
+      if (item !== currentItem) {
+        item.classList.remove('active');
+      }
+    });
+
+    currentItem.classList.toggle('active');
   });
 });
-
-
 
 
