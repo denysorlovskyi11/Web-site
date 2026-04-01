@@ -557,6 +557,17 @@ h2.section-title {
 
 
 
+.submenu {
+  display: none;
+  list-style: none;
+  padding-left: 15px;
+}
+
+.has-submenu:hover > .submenu {
+  display: block;
+}
+
+
 
 
 
