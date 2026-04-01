@@ -556,22 +556,40 @@ h2.section-title {
 }
 
 
-
+/* ховаємо всі підменю */
 .submenu {
   display: none;
   list-style: none;
   padding-left: 15px;
 }
 
+/* показуємо тільки при наведенні */
 .has-submenu:hover > .submenu {
   display: block;
 }
 
+/* відступ для вкладених рівнів */
+.submenu li {
+  padding-left: 10px;
+}
 
+/* другий рівень ще правіше */
+.submenu .submenu {
+  padding-left: 20px;
+}
 
+/* стиль пунктів */
+.has-submenu > span {
+  cursor: pointer;
+  display: block;
+  padding: 8px 0;
+}
 
-
-
+/* посилання */
+.sidebar ul li a {
+  display: block;
+  padding: 6px 0;
+}
 
 
 
