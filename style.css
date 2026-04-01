@@ -609,40 +609,4 @@ h2.section-title {
 
 
 
-.practice-submenu {
-  display: none;
-  list-style: none;
-  padding-left: 15px;
-  margin: 0;
-}
 
-.practice-item:hover > .practice-submenu {
-  display: block;
-}
-
-.third-submenu {
-  display: none;
-  list-style: none;
-  padding-left: 20px;
-  margin: 0;
-}
-
-.practice-group.active > .third-submenu {
-  display: block;
-}
-
-.practice-btn {
-  display: block;
-  width: 100%;
-  padding: 10px 20px;
-  background: transparent;
-  border: none;
-  color: white;
-  text-align: left;
-  cursor: pointer;
-  font: inherit;
-}
-
-.practice-btn:hover {
-  background-color: #0a4a86;
-}
