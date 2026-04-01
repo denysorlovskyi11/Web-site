@@ -602,13 +602,27 @@ h2.section-title {
   display: block;
 }
 
-.has-submenu > span {
-  cursor: pointer;
-  display: block;
-  padding: 8px 0;
 }
 
+/* Відступи для рівнів */
+.sidebar .practice-submenu {
+  padding-left: 15px;
+}
 
+.sidebar .third-level {
+  padding-left: 20px;
+}
+
+/* Щоб кнопка виглядала як звичайний пункт меню */
+.sidebar .submenu-toggle {
+  font-family: inherit;
+}
+
+/* Можеш трохи зменшити текст у вкладених меню */
+.sidebar .practice-submenu > li > button,
+.sidebar .third-level a {
+  font-size: 17px;
+}
 
 
 
