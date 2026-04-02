@@ -41,22 +41,5 @@ window.addEventListener('scroll', function() {
 });
 
 
-document.querySelectorAll('.practice-toggle').forEach(toggle => {
-  toggle.addEventListener('click', function(e) {
-    e.preventDefault();
-
-    const currentItem = this.parentElement;
-    const allItems = document.querySelectorAll('.practice-item');
-
-    allItems.forEach(item => {
-      if (item !== currentItem) {
-        item.classList.remove('active');
-      }
-    });
-
-    currentItem.classList.toggle('active');
-  });
-});
-
 
 
