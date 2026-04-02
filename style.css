@@ -561,39 +561,6 @@ h2.section-title {
 
 
 
-/* тільки для меню Практика */
-.practice-submenu,
-.practice-inner {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 15px;
-}
-
-/* 2 рівень відкривається при наведенні */
-.practice-hover:hover > .practice-submenu {
-  display: block;
-}
-
-/* 3 рівень відкривається по кліку */
-.practice-item.active > .practice-inner {
-  display: block;
-}
-
-/* щоб відступи були нормальні */
-.practice-submenu li,
-.practice-inner li {
-  margin: 0;
-  padding: 0;
-}
-
-.practice-submenu a,
-.practice-inner a {
-  display: block;
-}
-
-
-
 
 
 
