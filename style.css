@@ -557,6 +557,32 @@ h2.section-title {
 
 
 
+/* Показуємо підменю при наведенні */
+.sidebar .has-submenu:hover > .submenu {
+  display: block;
+}
+
+/* Стиль пунктів підменю */
+.sidebar .submenu li span,
+.sidebar .submenu li a {
+  color: #000;
+  white-space: nowrap;
+}
+
+/* Ефект наведення */
+.sidebar .submenu li a:hover,
+.sidebar .submenu li span:hover {
+  background: #e9f2ff;
+  border-radius: 6px;
+}
+
+/* Щоб головний пункт теж гарно реагував */
+.sidebar .has-submenu > span:hover {
+  color: #0077cc;
+}
+
+
+
 
 
 
