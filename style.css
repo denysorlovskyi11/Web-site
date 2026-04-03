@@ -570,36 +570,6 @@ h2.section-title {
 
 
 
-/* ===== другий рівень (збоку) ===== */
-
-.practice-group {
-  position: relative;
-}
-
-/* саме підменю */
-.practice-inner {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  margin-left: 5px;
-  background: #0a2f4a;
-  padding: 8px;
-  border-radius: 6px;
-  min-width: 180px;
-  z-index: 1000;
-}
-
-/* показ при наведенні */
-.practice-group:hover > .practice-inner {
-  display: block;
-}
-
-/* щоб текст не злипався */
-.practice-inner li {
-  margin: 6px 0;
-}
-
 
 
 
