@@ -557,30 +557,51 @@ h2.section-title {
 
 
 
-/* Показуємо підменю при наведенні */
-.sidebar .has-submenu:hover > .submenu {
+
+
+
+
+
+.practice-submenu {
+  display: none;
+  margin-top: 8px;
+  padding-left: 15px;
+}
+
+.practice-submenu.open {
   display: block;
 }
 
-/* Стиль пунктів підменю */
-.sidebar .submenu li span,
-.sidebar .submenu li a {
-  color: #000;
-  white-space: nowrap;
+.practice-item {
+  margin-bottom: 6px;
 }
 
-/* Ефект наведення */
-.sidebar .submenu li a:hover,
-.sidebar .submenu li span:hover {
-  background: #e9f2ff;
-  border-radius: 6px;
+.practice-item span {
+  display: block;
+  padding: 8px 10px;
+  cursor: pointer;
+  color: inherit;
 }
 
-/* Щоб головний пункт теж гарно реагував */
-.sidebar .has-submenu > span:hover {
-  color: #0077cc;
+.practice-inner {
+  display: none;
+  padding-left: 20px;
+  margin-top: 4px;
 }
 
+.practice-item:hover .practice-inner {
+  display: block;
+}
+
+.practice-inner li {
+  margin: 4px 0;
+}
+
+.practice-inner a {
+  display: block;
+  padding: 6px 10px;
+  text-decoration: none;
+}
 
 
 
