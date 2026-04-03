@@ -570,43 +570,24 @@ h2.section-title {
 
 
 
-/* ===== Практика ===== */
+/* ===== другий рівень (збоку) ===== */
 
-.practice-menu {
+.practice-group {
   position: relative;
 }
 
-/* перший рівень */
-.practice-submenu {
-  display: none;
-  position: static;
-  margin-top: 8px;
-  margin-left: 15px;
-  padding: 0;
-  list-style: none;
-}
-
-.practice-submenu.open {
-  display: block;
-}
-
-.practice-submenu li {
-  position: relative;
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-/* другий рівень (вправо) */
+/* саме підменю */
 .practice-inner {
   display: none;
   position: absolute;
   top: 0;
   left: 100%;
-  margin-left: 10px;
+  margin-left: 5px;
   background: #0a2f4a;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 8px;
+  border-radius: 6px;
   min-width: 180px;
+  z-index: 1000;
 }
 
 /* показ при наведенні */
@@ -614,26 +595,10 @@ h2.section-title {
   display: block;
 }
 
-/* посилання */
-.practice-submenu a,
-.practice-submenu span,
-.practice-inner a {
-  display: block;
-  padding: 6px 0;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
+/* щоб текст не злипався */
+.practice-inner li {
+  margin: 6px 0;
 }
-
-/* hover ефект */
-.practice-submenu a:hover,
-.practice-inner a:hover,
-.practice-submenu span:hover {
-  background: #0a3a5a;
-  border-radius: 5px;
-  padding-left: 5px;
-}
-
 
 
 
