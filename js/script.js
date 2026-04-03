@@ -100,31 +100,40 @@ practiceItems.forEach(item => {
 
 
 
-
 // -----------------------------
-// Плавне відкриття підменю практики
+// Плавне відкриття підменю практики БЕЗ накладання
 // -----------------------------
 const practiceItems = document.querySelectorAll('.practice-item');
 
-let hoverTimeout;
+let openTimeout;
+let closeTimeout;
 
 practiceItems.forEach(item => {
-
   item.addEventListener('mouseenter', () => {
-    clearTimeout(hoverTimeout);
+    clearTimeout(closeTimeout);
+    clearTimeout(openTimeout);
 
-    hoverTimeout = setTimeout(() => {
-      practiceItems.forEach(i => i.classList.remove('active-practice'));
+    // одразу закриваємо всі інші
+    practiceItems.forEach(i => {
+      if (i !== item) {
+        i.classList.remove('active-practice');
+      }
+    });
+
+    // і з невеликою затримкою відкриваємо поточний
+    openTimeout = setTimeout(() => {
       item.classList.add('active-practice');
-    }, 200);
+    }, 120);
   });
 
   item.addEventListener('mouseleave', () => {
-    clearTimeout(hoverTimeout);
+    clearTimeout(openTimeout);
+
+    closeTimeout = setTimeout(() => {
+      item.classList.remove('active-practice');
+    }, 120);
   });
-
 });
-
 
 
 
