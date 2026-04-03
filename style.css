@@ -678,6 +678,79 @@ h2.section-title {
 
 
 
+  МЕНЮ ПРАКТИКА (виправлене)
+----------------------------- */
+
+.practice-menu,
+.practice-submenu,
+.practice-item,
+.practice-inner {
+  position: static !important;
+}
+
+/* Головне підменю */
+.practice-submenu {
+  display: none;
+  padding-left: 15px;
+  margin-top: 8px;
+}
+
+.practice-submenu.open {
+  display: block;
+}
+
+/* Пункти практики */
+.practice-item {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.practice-item > a,
+.practice-item > span {
+  display: block;
+  padding: 8px 0;
+}
+
+/* Внутрішнє підменю */
+.practice-inner {
+  display: none;
+  padding-left: 18px;
+  margin-top: 6px;
+}
+
+/* Показ при наведенні (через JS клас) */
+.practice-item.active-practice .practice-inner {
+  display: block;
+}
+
+/* Елементи списку */
+.practice-inner li {
+  display: block;
+  margin: 6px 0;
+}
+
+/* Посилання */
+.practice-inner a {
+  display: block;
+  line-height: 1.4;
+  padding: 4px 0;
+  white-space: normal;
+}
+
+/* ❗ ІЗОЛЯЦІЯ від старого submenu */
+.practice-submenu,
+.practice-inner {
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  float: none !important;
+}
+
+
+
+
+
 
 
 
