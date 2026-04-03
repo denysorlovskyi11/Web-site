@@ -137,6 +137,41 @@ practiceItems.forEach(item => {
 
 
 
+// Меню "Практика" по кліку
+// -----------------------------
+const practiceToggle = document.getElementById('practice-toggle');
+const practiceSubmenu = document.getElementById('practice-submenu');
+
+if (practiceToggle && practiceSubmenu) {
+  practiceToggle.addEventListener('click', function (e) {
+    e.preventDefault();
+    practiceSubmenu.classList.toggle('open');
+  });
+}
+
+// -----------------------------
+// Вкладені підменю практик по кліку
+// -----------------------------
+const practiceItems = document.querySelectorAll('.practice-item > span');
+
+practiceItems.forEach(itemTitle => {
+  itemTitle.addEventListener('click', function () {
+    const parentItem = this.parentElement;
+
+    // закрити всі інші
+    document.querySelectorAll('.practice-item').forEach(item => {
+      if (item !== parentItem) {
+        item.classList.remove('open');
+      }
+    });
+
+    // відкрити/закрити поточний
+    parentItem.classList.toggle('open');
+  });
+});
+
+
+
 
 
 
