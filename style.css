@@ -742,12 +742,17 @@ h2.section-title {
 
 
 
+
+
+
+
+
 /* ===== Практика ===== */
 
 .practice-submenu {
   display: none;
-  margin-top: 8px;
-  padding-left: 15px;
+  margin: 8px 0 0 0;
+  padding: 0 0 0 15px;
   list-style: none;
 }
 
@@ -771,8 +776,8 @@ h2.section-title {
 }
 
 .practice-inner {
-  margin-top: 6px;
-  padding-left: 18px;
+  margin: 6px 0 10px 18px;
+  padding: 0;
   list-style: none;
 }
 
@@ -780,18 +785,20 @@ h2.section-title {
   margin-bottom: 8px;
 }
 
-/* прибираємо вплив старого submenu */
+/* важливо: прибираємо вплив старого .submenu */
 .practice-submenu,
-.practice-inner {
+.practice-inner,
+.practice-submenu li,
+.practice-inner li {
   position: static !important;
   top: auto !important;
   left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
   width: auto !important;
   height: auto !important;
   float: none !important;
 }
-
-
 
 
 
