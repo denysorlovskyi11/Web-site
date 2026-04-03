@@ -75,6 +75,33 @@ if (practiceToggle && practiceSubmenu) {
 
 
 
+// Плавне відкриття підменю практики (з затримкою)
+// -----------------------------
+const practiceItems = document.querySelectorAll('.practice-item');
+
+let hoverTimeout;
+
+practiceItems.forEach(item => {
+
+  item.addEventListener('mouseenter', () => {
+    clearTimeout(hoverTimeout);
+
+    hoverTimeout = setTimeout(() => {
+      practiceItems.forEach(i => i.classList.remove('active-practice'));
+      item.classList.add('active-practice');
+    }, 200); // затримка 200мс
+  });
+
+  item.addEventListener('mouseleave', () => {
+    clearTimeout(hoverTimeout);
+  });
+
+});
+
+
+
+
+
 
 
 
