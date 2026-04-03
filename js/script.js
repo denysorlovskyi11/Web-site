@@ -56,15 +56,4 @@ window.addEventListener('scroll', function () {
 
 
 
-// -----------------------------
-// Меню "Практика" по кліку
-// -----------------------------
-const practiceToggle = document.getElementById('practice-toggle');
-const practiceSubmenu = document.getElementById('practice-submenu');
-
-if (practiceToggle && practiceSubmenu) {
-  practiceToggle.addEventListener('click', function (e) {
-    e.preventDefault();
-    practiceSubmenu.classList.toggle('open');
-  });
 }
