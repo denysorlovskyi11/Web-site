@@ -44,15 +44,30 @@ window.addEventListener('scroll', function() {
 
 
 // -----------------------------
-// Меню "Практика" по кліку
+// Меню "Практика" по кліку + підсвічування
 // -----------------------------
 const practiceToggle = document.getElementById('practice-toggle');
 const practiceSubmenu = document.getElementById('practice-submenu');
 
 if (practiceToggle && practiceSubmenu) {
+
   practiceToggle.addEventListener('click', function(e) {
     e.preventDefault();
     practiceSubmenu.classList.toggle('open');
+  });
+
+  // Підсвічування активної практики
+  const practiceItems = document.querySelectorAll('.practice-item');
+
+  practiceItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+
+      // прибрати активний клас з усіх
+      practiceItems.forEach(i => i.classList.remove('active-practice'));
+
+      // додати активний
+      item.classList.add('active-practice');
+    });
   });
 }
 
