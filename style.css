@@ -637,6 +637,30 @@ h2.section-title {
 
 
 
+Плавніше меню 
+.practice-inner {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.practice-item:hover .practice-inner {
+  max-height: 200px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.practice-item {
+  padding-bottom: 6px;
+}
+
+
+
 
 
 
