@@ -610,6 +610,35 @@ h2.section-title {
 
 
 
+/* Відкрите меню */
+.practice-submenu {
+  display: none;
+}
+
+.practice-submenu.open {
+  display: block;
+}
+
+/* Підменю */
+.practice-inner {
+  display: none;
+}
+
+.practice-item:hover .practice-inner {
+  display: block;
+}
+
+/* 🔥 Підсвічування активної практики */
+.practice-item.active-practice > span {
+  background-color: #0a3a5a;
+  color: #fff;
+  border-radius: 6px;
+}
+
+
+
+
+
 
 
 
