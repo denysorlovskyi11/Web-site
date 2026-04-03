@@ -572,7 +572,6 @@ h2.section-title {
 
 
 
-
 /* ===== Практика ===== */
 
 .practice-submenu {
@@ -601,17 +600,23 @@ h2.section-title {
   line-height: 1.4;
 }
 
+/* ❗ ВАЖЛИВО */
 .practice-inner {
+  display: none;
   margin: 6px 0 10px 18px;
   padding: 0;
   list-style: none;
+}
+
+.practice-item.open > .practice-inner {
+  display: block;
 }
 
 .practice-inner li {
   margin-bottom: 8px;
 }
 
-/* важливо: прибираємо вплив старого .submenu */
+/* ізоляція */
 .practice-submenu,
 .practice-inner,
 .practice-submenu li,
@@ -625,7 +630,6 @@ h2.section-title {
   height: auto !important;
   float: none !important;
 }
-
 
 
 
