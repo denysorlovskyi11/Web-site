@@ -564,8 +564,8 @@ h2.section-title {
 
 .practice-submenu {
   display: none;
-  margin-top: 8px;
   padding-left: 15px;
+  margin-top: 5px;
 }
 
 .practice-submenu.open {
@@ -573,20 +573,21 @@ h2.section-title {
 }
 
 .practice-item {
-  margin-bottom: 6px;
+  position: relative;
+  margin-bottom: 5px;
 }
 
 .practice-item span {
   display: block;
-  padding: 8px 10px;
+  padding: 10px 0;
   cursor: pointer;
-  color: inherit;
+  color: white;
 }
 
 .practice-inner {
   display: none;
   padding-left: 20px;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .practice-item:hover .practice-inner {
@@ -594,15 +595,15 @@ h2.section-title {
 }
 
 .practice-inner li {
-  margin: 4px 0;
+  margin: 5px 0;
 }
 
 .practice-inner a {
-  display: block;
-  padding: 6px 10px;
+  color: white;
   text-decoration: none;
+  display: block;
+  padding: 5px 0;
 }
-
 
 
 
