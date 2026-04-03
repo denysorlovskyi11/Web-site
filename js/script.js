@@ -43,3 +43,18 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
+<script>
+  const practiceToggle = document.getElementById("practice-toggle");
+  const practiceSubmenu = document.getElementById("practice-submenu");
+
+  practiceToggle.addEventListener("click", function(e) {
+    e.preventDefault();
+    practiceSubmenu.classList.toggle("open");
+  });
+</script>
+
+
+
+
