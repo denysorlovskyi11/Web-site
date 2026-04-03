@@ -570,14 +570,19 @@ h2.section-title {
 
 
 
-
-
 /* ===== Практика ===== */
 
+.practice-menu {
+  position: relative;
+}
+
+/* перший рівень */
 .practice-submenu {
   display: none;
-  margin: 8px 0 0 0;
-  padding: 0 0 0 15px;
+  position: static;
+  margin-top: 8px;
+  margin-left: 15px;
+  padding: 0;
   list-style: none;
 }
 
@@ -586,49 +591,47 @@ h2.section-title {
 }
 
 .practice-submenu li {
+  position: relative;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 10px;
 }
 
-.practice-main-link,
-.practice-submenu a {
-  display: block;
-  padding: 8px 0;
-  text-decoration: none;
-  color: inherit;
-  line-height: 1.4;
-}
-
-/* ❗ ВАЖЛИВО */
+/* другий рівень (вправо) */
 .practice-inner {
   display: none;
-  margin: 6px 0 10px 18px;
-  padding: 0;
-  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  background: #0a2f4a;
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 180px;
 }
 
-.practice-item.open > .practice-inner {
+/* показ при наведенні */
+.practice-group:hover > .practice-inner {
   display: block;
 }
 
-.practice-inner li {
-  margin-bottom: 8px;
+/* посилання */
+.practice-submenu a,
+.practice-submenu span,
+.practice-inner a {
+  display: block;
+  padding: 6px 0;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-/* ізоляція */
-.practice-submenu,
-.practice-inner,
-.practice-submenu li,
-.practice-inner li {
-  position: static !important;
-  top: auto !important;
-  left: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-  width: auto !important;
-  height: auto !important;
-  float: none !important;
+/* hover ефект */
+.practice-submenu a:hover,
+.practice-inner a:hover,
+.practice-submenu span:hover {
+  background: #0a3a5a;
+  border-radius: 5px;
+  padding-left: 5px;
 }
 
 
